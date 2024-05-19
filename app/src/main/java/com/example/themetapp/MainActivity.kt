@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         val btn = findViewById<Button>(R.id.button2)
         btn.setOnClickListener{
             MetMuseumRemoteDatasource(apiService).getObjectById{ item, error ->
-                Toast.makeText(this,  "{$item.artistDisplayName}", Toast.LENGTH_LONG).show()
+                val name = item?.artistDisplayName
+                Toast.makeText(this,  name, Toast.LENGTH_LONG).show()
 
             }
         }
