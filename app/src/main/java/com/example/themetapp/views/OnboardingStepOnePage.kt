@@ -1,28 +1,29 @@
-package com.example.themetapp.views;
+package com.example.themetapp.views
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import com.example.themetapp.R
+import com.example.themetapp.datasources.MetMuseumRemoteDatasource
+import com.example.themetapp.network.ApiService
+import com.example.themetapp.viewmodels.HomeViewModel
+
+class OnboardingStepOnePage : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.onboarding_step_one)
+
+        val btn = findViewById<Button>(R.id.btn_navigate_to_step_2)
 
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.themetapp.R;
-
-
-public class OnboardingStepOnePage extends AppCompatActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.onboarding_step_one);
-
-        Button btnNavigateToStep2 = findViewById(R.id.btn_navigate_to_step_2);
-        btnNavigateToStep2.setOnClickListener(v -> {
-            Intent intent = new Intent(OnboardingStepOnePage.this, OnboardingStepTwoPage.class);
-            startActivity(intent);
-        });
-
-
+        btn.setOnClickListener {
+            val intent = Intent(
+                this@OnboardingStepOnePage, OnboardingStepTwoPage::class.java
+            )
+            startActivity(intent)
+        }
     }
 }

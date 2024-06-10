@@ -22,12 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.OnboardingStepOnePage">
-        </activity>
-        <activity android:name=".views.OnboardingStepTwoPage">
-        </activity>
-        <activity android:name=".views.OnboardingStepThreePage">
-        </activity>
+        <activity android:name=".views.OnboardingStepOnePage"></activity>
+        <activity android:name=".views.OnboardingStepTwoPage"></activity>
+        <activity android:name=".views.OnboardingStepThreePage"></activity>
+        <activity android:name=".views.HomePage"></activity>
+        <activity android:name=".views.DepartmentPage"></activity>
+        <activity android:name=".views.ObjectPage"></activity>
 
     </application>
 

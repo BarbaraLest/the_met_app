@@ -8,6 +8,10 @@ import retrofit2.http.Query
 
 interface ApiService {
 
+    companion object {
+        val apiService by lazy { services() }
+    }
+
     @GET("/public/collection/v1/objects/{id}")
     fun getObjectById(@Path("id") id: Int): Call<ResponseBody>
 
