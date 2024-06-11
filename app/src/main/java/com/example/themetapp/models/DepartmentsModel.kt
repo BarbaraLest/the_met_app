@@ -2,10 +2,10 @@ package com.example.themetapp.models
 
 
 data class DepartmentsModel(
-    val departments: List<Department>
+    val departments: List<DepartmentModel>
 )
 
-data class Department(
+data class DepartmentModel(
     val departmentId: Int,
     val displayName: String
 )
