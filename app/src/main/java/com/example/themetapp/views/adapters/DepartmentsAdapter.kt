@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.themetapp.R
 import com.example.themetapp.models.DepartmentModel
@@ -19,7 +20,9 @@ class DepartmentsAdapter(
     RecyclerView.Adapter<DepartmentsAdapter.DepartmentItem>() {
 
     class DepartmentItem(view: View) : RecyclerView.ViewHolder(view) {
-        val btnViewDepartmentName: TextView = view.findViewById(R.id.btnViewDepartmentName)
+        val departmentCard: CardView = view.findViewById(R.id.item_department)
+        val departmentText: TextView = view.findViewById(R.id.item_text)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DepartmentItem {
@@ -32,8 +35,8 @@ class DepartmentsAdapter(
 
     override fun onBindViewHolder(holder: DepartmentItem, position: Int) {
         val department = departments[position]
-        holder.btnViewDepartmentName.text = department.displayName
-        holder.btnViewDepartmentName.setOnClickListener {
+        holder.departmentText.text = department.displayName
+        holder.departmentCard.setOnClickListener {
             val intent = Intent(
                 context,
                 DepartmentPage::class.java

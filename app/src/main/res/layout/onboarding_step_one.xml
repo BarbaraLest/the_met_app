@@ -17,6 +17,14 @@
         android:padding="28dp">
 
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="298dp"
+            android:layout_height="305dp"
+            app:srcCompat="@drawable/onboarding_step_one" />
+
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,20 +52,20 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="15dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="20dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="6dp"
                 android:src="@drawable/active_dot_indicator" />
 
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="6dp"
                 android:src="@drawable/inactive_dot_indicator" />
 
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
                 android:src="@drawable/inactive_dot_indicator" />
 
         </LinearLayout>

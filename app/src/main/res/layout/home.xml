@@ -12,24 +12,36 @@
         android:background="@android:color/transparent"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="28dp">
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Welcome to\nThe Met App Guide"
+            android:textAlignment="viewStart"
+            android:textColor="#8B7162"
+            android:textSize="28sp" />
+
+
+
+        <TextView
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="Explore our departments and chose one to see your details"
+            android:textAlignment="viewStart"
+            android:textColor="#424242"
+            android:textSize="16dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewDepartments"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
             android:padding="16dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif-black"
-            android:text="Welcome to\nThe Met App Guide"
-            android:textColor="#8B7162"
-            android:textSize="28sp" />
-
-
 
 
     </LinearLayout>
