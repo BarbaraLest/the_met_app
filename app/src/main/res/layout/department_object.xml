@@ -31,7 +31,7 @@
                 android:paddingHorizontal="20dp"
                 android:text="Noite Estrelada"
                 android:textSize="18dp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/department_object_author"
@@ -40,7 +40,7 @@
                 android:gravity="end"
                 android:paddingHorizontal="20dp"
                 android:text="Van Gogh"
-                android:textSize="12dp"></TextView>
+                android:textSize="12dp" />
 
             <TextView
                 android:id="@+id/department_object_year"
@@ -49,7 +49,7 @@
                 android:gravity="end"
                 android:paddingHorizontal="20dp"
                 android:text="1900"
-                android:textSize="12dp"></TextView>
+                android:textSize="12dp" />
 
 
         </LinearLayout>

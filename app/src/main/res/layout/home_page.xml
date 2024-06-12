@@ -34,7 +34,7 @@
             android:text="Explore our departments and chose one to see your details"
             android:textAlignment="viewStart"
             android:textColor="#424242"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewDepartments"

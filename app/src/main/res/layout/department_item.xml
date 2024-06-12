@@ -31,7 +31,7 @@
                 android:paddingHorizontal="20dp"
                 android:text="Modern Art"
                 android:textSize="18dp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
                 android:gravity="end"
                 android:paddingHorizontal="20dp"
                 android:text="Explore department"
-                android:textSize="12dp"></TextView>
+                android:textSize="12dp" />
 
 
         </LinearLayout>
