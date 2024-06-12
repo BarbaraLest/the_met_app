@@ -3,6 +3,6 @@
     <solid android:color="#9b9c96" />
     <corners android:radius="15dp" />
     <size
-        android:width="50dp"
-        android:height="15dp" />
+        android:width="20dp"
+        android:height="10dp" />
 </shape>
