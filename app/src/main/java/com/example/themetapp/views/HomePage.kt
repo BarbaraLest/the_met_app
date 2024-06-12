@@ -12,7 +12,7 @@ import com.example.themetapp.datasources.MetMuseumRemoteDatasource
 import com.example.themetapp.network.ApiService
 import com.example.themetapp.viewmodels.HomeViewModel
 import com.example.themetapp.viewmodels.factorys.HomeViewModelFactory
-import com.example.themetapp.views.adapters.DepartmentsAdapter
+import com.example.themetapp.views.adapters.HomeAdapter
 
 class HomePage : AppCompatActivity() {
     private val datasource = MetMuseumRemoteDatasource(ApiService.apiService)
@@ -26,7 +26,7 @@ class HomePage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home)
+        setContentView(R.layout.home_page)
 
 
 
@@ -48,18 +48,11 @@ class HomePage : AppCompatActivity() {
         })
 
         viewModel.departments.observe(this, Observer { departments ->
-            recyclerView.adapter = DepartmentsAdapter(this, departments.departments)
+            recyclerView.adapter = HomeAdapter(this, departments.departments)
         })
 
         viewModel.loadDepartments()
 
-//        btn.setOnClickListener {
-//            val intent = Intent(
-//                this@HomePage, DepartmentPage::class.java
-//            ).apply {
-//                putExtra("departmentId", 1)
-//            }
-//            startActivity(intent)
-//        }
+
     }
 }

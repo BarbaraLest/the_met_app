@@ -9,39 +9,44 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.themetapp.R
-import com.example.themetapp.models.DepartmentModel
-import com.example.themetapp.views.DepartmentPage
-
+import com.example.themetapp.models.ObjectModel
+import com.example.themetapp.views.ObjectPage
 
 class DepartmentsAdapter(
     private val context: Context,
-    private val departments: List<DepartmentModel>
+    private val objects: List<ObjectModel>
 ) :
-    RecyclerView.Adapter<DepartmentsAdapter.DepartmentItem>() {
+    RecyclerView.Adapter<DepartmentsAdapter.DepartmentObject>() {
 
-    class DepartmentItem(view: View) : RecyclerView.ViewHolder(view) {
-        val departmentCard: CardView = view.findViewById(R.id.item_department)
-        val departmentText: TextView = view.findViewById(R.id.item_text)
+    class DepartmentObject(view: View) : RecyclerView.ViewHolder(view) {
+        val departmentObjectCard: CardView = view.findViewById(R.id.department_object)
+        val departmentObjectName: TextView = view.findViewById(R.id.department_object_name)
+        val departmentObjectAuthor: TextView = view.findViewById(R.id.department_object_author)
+        val departmentObjectYear: TextView = view.findViewById(R.id.department_object_year)
+
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DepartmentItem {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DepartmentObject {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.department, parent, false)
+            .inflate(R.layout.department_object, parent, false)
 
 
-        return DepartmentItem(view)
+        return DepartmentObject(view)
     }
 
-    override fun onBindViewHolder(holder: DepartmentItem, position: Int) {
-        val department = departments[position]
-        holder.departmentText.text = department.displayName
-        holder.departmentCard.setOnClickListener {
+    override fun onBindViewHolder(holder: DepartmentObject, position: Int) {
+        val departmentObject = objects[position]
+
+        holder.departmentObjectName.text = departmentObject.title
+        holder.departmentObjectAuthor.text = departmentObject.artistDisplayName
+        holder.departmentObjectYear.text = departmentObject.objectDate
+        holder.departmentObjectCard.setOnClickListener {
             val intent = Intent(
                 context,
-                DepartmentPage::class.java
+                ObjectPage::class.java
             ).apply {
-                putExtra("departmentId", 1)
+                putExtra("objectModel", departmentObject)
             }
             context.startActivity(intent)
         }
@@ -50,6 +55,6 @@ class DepartmentsAdapter(
 
 
     override fun getItemCount(): Int {
-        return departments.size
+        return objects.size
     }
 }

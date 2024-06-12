@@ -8,7 +8,7 @@
     android:padding="16dp">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/item_department"
+        android:id="@+id/department_object"
         android:layout_width="match_parent"
         android:layout_height="71dp"
         android:elevation="0dp"
@@ -24,21 +24,31 @@
             android:paddingTop="10dp">
 
             <TextView
-                android:id="@+id/item_text"
+                android:id="@+id/department_object_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ellipsize="start"
                 android:paddingHorizontal="20dp"
-                android:text="Modern Art"
+                android:text="Noite Estrelada"
                 android:textSize="18dp"
                 android:textStyle="bold"></TextView>
 
             <TextView
+                android:id="@+id/department_object_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:paddingHorizontal="20dp"
-                android:text="Explore department"
+                android:text="Van Gogh"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/department_object_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingHorizontal="20dp"
+                android:text="1900"
                 android:textSize="12dp"></TextView>
 
 
