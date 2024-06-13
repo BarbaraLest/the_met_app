@@ -63,13 +63,3 @@ data class ObjectModel(
     val isTimelineWork: Boolean?,
     val galleryNumber: String?,
 ) : Parcelable
-
-data class Constituent(
-    val constituentID: String,
-    val constituentId: Long,
-    val role: String,
-    val name: String,
-    val constituentUlanUrl: String,
-    val constituentWikidataUrl: String,
-    val gender: String,
-)

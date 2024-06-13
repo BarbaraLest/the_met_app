@@ -21,7 +21,7 @@
             android:fontFamily="sans-serif-black"
             android:text="Welcome to\nThe Met App Guide"
             android:textAlignment="viewStart"
-            android:textColor="#8B7162"
+            android:textColor="#1B61BB"
             android:textSize="28sp" />
 
 

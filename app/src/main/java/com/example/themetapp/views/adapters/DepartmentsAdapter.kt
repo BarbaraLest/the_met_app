@@ -22,7 +22,6 @@ class DepartmentsAdapter(
         val departmentObjectCard: CardView = view.findViewById(R.id.department_object)
         val departmentObjectName: TextView = view.findViewById(R.id.department_object_name)
         val departmentObjectAuthor: TextView = view.findViewById(R.id.department_object_author)
-        val departmentObjectYear: TextView = view.findViewById(R.id.department_object_year)
 
 
     }
@@ -40,7 +39,6 @@ class DepartmentsAdapter(
 
         holder.departmentObjectName.text = departmentObject.title
         holder.departmentObjectAuthor.text = departmentObject.artistDisplayName
-        holder.departmentObjectYear.text = departmentObject.objectDate
         holder.departmentObjectCard.setOnClickListener {
             val intent = Intent(
                 context,

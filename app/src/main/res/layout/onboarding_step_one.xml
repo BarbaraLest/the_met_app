@@ -14,15 +14,16 @@
         android:background="#F0EEEB"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="28dp">
+        android:padding="28dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp">
 
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="298dp"
-            android:layout_height="305dp"
-            app:srcCompat="@drawable/onboarding_step_one" />
-
+            android:layout_width="277dp"
+            android:layout_height="203dp"
+            app:srcCompat="@drawable/onboarding_1" />
 
 
         <TextView
@@ -32,14 +33,14 @@
             android:fontFamily="sans-serif-black"
             android:text="Welcome to\nThe Met App Guide"
             android:textAlignment="center"
-            android:textColor="#8B7162"
+            android:textColor="#1B61BB"
             android:textSize="34sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Welcome to your guide, The Met App. Here some steps to help you in your journey. "
+            android:text="Welcome to your guide, The Met App."
             android:textAlignment="center"
             android:textColor="#424242" />
 

@@ -21,8 +21,18 @@
             android:fontFamily="sans-serif-black"
             android:text="Modern Art"
             android:textAlignment="viewStart"
-            android:textColor="#8B7162"
+            android:textColor="#214578"
             android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Tap to see more details about your favorite work of art"
+            android:textAlignment="viewStart"
+            android:textColor="#424242"
+            android:textSize="20sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewObjects"

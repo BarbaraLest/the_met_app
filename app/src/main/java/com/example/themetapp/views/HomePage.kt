@@ -4,7 +4,6 @@ import android.app.AlertDialog
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.themetapp.R
@@ -39,17 +38,17 @@ class HomePage : AppCompatActivity() {
             setCancelable(false)
         }.create()
 
-        viewModel.isLoading.observe(this, Observer { isLoading ->
+        viewModel.isLoading.observe(this) { isLoading ->
             if (isLoading) {
                 progressDialog.show()
             } else {
                 progressDialog.dismiss()
             }
-        })
+        }
 
-        viewModel.departments.observe(this, Observer { departments ->
+        viewModel.departments.observe(this) { departments ->
             recyclerView.adapter = HomeAdapter(this, departments.departments)
-        })
+        }
 
         viewModel.loadDepartments()
 

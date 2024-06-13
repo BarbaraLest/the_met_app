@@ -8,6 +8,7 @@ import com.example.themetapp.datasources.MetMuseumRemoteDatasource
 import com.example.themetapp.models.DepartmentObjectsIdsModel
 import com.example.themetapp.models.ObjectModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withContext
@@ -18,7 +19,6 @@ class DepartmentViewModel(private val datasource: MetMuseumRemoteDatasource) : V
     val departmentObjects: LiveData<List<ObjectModel>> get() = _departmentObjects
 
     private val _error = MutableLiveData<String?>()
-    val error: LiveData<String?> get() = _error
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> get() = _isLoading
@@ -44,6 +44,7 @@ class DepartmentViewModel(private val datasource: MetMuseumRemoteDatasource) : V
         }
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     private suspend fun getDepartmentObjectsIdsAsync(id: Int): DepartmentObjectsIdsModel {
         return suspendCancellableCoroutine { continuation ->
             datasource.getDepartmentObjectsIds(id) { item, throwable ->
@@ -75,6 +76,7 @@ class DepartmentViewModel(private val datasource: MetMuseumRemoteDatasource) : V
         return objects
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     private suspend fun getObjectByIdAsync(id: Int): ObjectModel? {
         return suspendCancellableCoroutine { continuation ->
             datasource.getObjectById(id) { item, throwable ->

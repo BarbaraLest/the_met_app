@@ -17,7 +17,7 @@ class OnboardingStepTwoPage : AppCompatActivity() {
         btn.setOnClickListener {
             val intent = Intent(
                 this@OnboardingStepTwoPage,
-                OnboardingStepThreePage::class.java
+                HomePage::class.java
             )
             startActivity(intent)
         }

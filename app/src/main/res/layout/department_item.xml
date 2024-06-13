@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="71dp"
         android:elevation="0dp"
-        app:cardBackgroundColor="#9F9394"
+        app:cardBackgroundColor="#214578"
         app:cardCornerRadius="10dp">
 
 
@@ -31,7 +31,9 @@
                 android:paddingHorizontal="20dp"
                 android:text="Modern Art"
                 android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,6 +41,7 @@
                 android:gravity="end"
                 android:paddingHorizontal="20dp"
                 android:text="Explore department"
+                android:textColor="@color/white"
                 android:textSize="12dp" />
 
 

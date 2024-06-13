@@ -4,7 +4,6 @@ import android.app.AlertDialog
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.themetapp.R
@@ -40,17 +39,17 @@ class DepartmentPage : AppCompatActivity() {
         }.create()
 
 
-        viewModel.isLoading.observe(this, Observer { isLoading ->
+        viewModel.isLoading.observe(this) { isLoading ->
             if (isLoading) {
                 progressDialog.show()
             } else {
                 progressDialog.dismiss()
             }
-        })
+        }
 
-        viewModel.departmentObjects.observe(this, Observer { departmentObjects ->
+        viewModel.departmentObjects.observe(this) { departmentObjects ->
             recyclerView.adapter = DepartmentsAdapter(this, departmentObjects)
-        })
+        }
 
         viewModel.getDepartmentObjectsIds(departmentId!!.toInt())
 

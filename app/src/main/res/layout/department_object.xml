@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="71dp"
         android:elevation="0dp"
-        app:cardBackgroundColor="#9F9394"
+        app:cardBackgroundColor="#49A9F1"
         app:cardCornerRadius="10dp">
 
 
@@ -30,7 +30,8 @@
                 android:ellipsize="start"
                 android:paddingHorizontal="20dp"
                 android:text="Noite Estrelada"
-                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -40,16 +41,8 @@
                 android:gravity="end"
                 android:paddingHorizontal="20dp"
                 android:text="Van Gogh"
-                android:textSize="12dp" />
-
-            <TextView
-                android:id="@+id/department_object_year"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:paddingHorizontal="20dp"
-                android:text="1900"
-                android:textSize="12dp" />
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
 
         </LinearLayout>
