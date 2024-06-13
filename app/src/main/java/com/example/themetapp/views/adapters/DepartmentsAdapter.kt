@@ -24,6 +24,7 @@ class DepartmentsAdapter(
         val departmentObjectAuthor: TextView = view.findViewById(R.id.department_object_author)
 
 
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DepartmentObject {

@@ -14,6 +14,7 @@ convertergson = "2.11.0"
 okhttp="4.12.0"
 viewmodel="2.8.1"
 recyclerview="1.3.2"
+glide="4.16.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -29,6 +30,8 @@ converter-gson = { group = "com.squareup.retrofit2",name = "converter-gson", ver
 okhttp= { group = "com.squareup.okhttp3",name = "logging-interceptor", version.ref ="okhttp"}
 androidx-lifecycle-viewmodel= { group = "androidx.lifecycle",name = "lifecycle-viewmodel", version.ref ="viewmodel"}
 androidx-recyclerview= { group = "androidx.recyclerview",name = "recyclerview", version.ref ="recyclerview"}
+glide= { group = "com.github.bumptech.glide",name = "glide", version.ref ="glide"}
+
 
 
 

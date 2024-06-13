@@ -41,7 +41,7 @@ class HomeAdapter(
                 context,
                 DepartmentPage::class.java
             ).apply {
-                putExtra("departmentId", department.departmentId.toString())
+                putExtra("departmentModel", department)
             }
             context.startActivity(intent)
         }
